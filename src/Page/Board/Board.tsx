@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import * as Styled from "./styled";
-import axios from 'axios';
+import axios from "axios";
 
 const Board = () => {
   const [boards, setBoards] = useState([

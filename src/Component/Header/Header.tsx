@@ -1,12 +1,11 @@
 import * as Styled from "./styled";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import { Link } from "react-scroll";
 
 const Header = () => {
 
     const navigate = useNavigate();
-    //const location = useLocation();
 
     const [scrollPosition, setScrollPosition] = useState(0);
 
