@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import * as Styled from "./styled";
 import axios from 'axios';
 
 const Board = () => {
@@ -22,17 +23,17 @@ const Board = () => {
   }, []);
 
   return (
-    <div>
+    <Styled.BoardWrapper>
       <h2>게시판 목록</h2>
       <ul>
-      {boards.map(board => (
-        <li key={board.id}>
-          <h3>{board.title}</h3>
-          <p>{board.content}</p>
-        </li>
-      ))}
+        {boards.map(board => (
+          <li key={board.id}>
+            <h3>{board.title}</h3>
+            <p>{board.content}</p>
+          </li>
+        ))}
       </ul>
-    </div>
+    </Styled.BoardWrapper>
   );
 };
 
