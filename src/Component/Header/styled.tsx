@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const Wrapper = styled.div<{ scroll : boolean }>`  // TypeScript에서 props 사용시 타입지정 해줘야함.
+export const Wrapper = styled.div<{ $scroll : boolean }>`  // TypeScript에서 props 사용시 타입지정 해줘야함.
   /* 레이아웃 */
   display: flex; //가로방향 정렬
   position: fixed;
@@ -14,16 +14,8 @@ export const Wrapper = styled.div<{ scroll : boolean }>`  // TypeScript에서 pr
   z-index: 3;
 
   /* 색상 */
-  background: ${(props) => props.scroll ? "white" : "transparent"};
-  box-shadow: ${(props) => {
-    let shadow;
-    if (props.scroll) {
-      shadow = "0 0 10px 0";
-    } else {
-      shadow = "0";
-    }
-    return shadow;
-  }};
+  background: ${props => props.$scroll ? "white" : "transparent"};
+  box-shadow: ${props => props.$scroll ? "0 0 10px 0" : "0"};
   color: black;
 `;
 
@@ -38,9 +30,9 @@ export const WrapperMenu = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.div<{ scroll: boolean }>`
+export const Title = styled.div<{ $scroll: boolean }>`
   cursor: pointer;
-  color: ${(props) => (props.scroll ? "black" : "white")};
+  color: ${props => props.$scroll ? "black" : "white"};
   text-decoration: underline;
   font-size: 30px;
   font-weight: bold;
@@ -56,9 +48,9 @@ export const Title = styled.div<{ scroll: boolean }>`
   }
 `;
 
-export const Text = styled.div<{ scroll: boolean }>`
+export const Text = styled.div<{ $scroll: boolean }>`
   cursor: pointer;
-  color: ${(props) => (props.scroll ? "black" : "white")};
+  color: ${props => props.$scroll ? "black" : "white"};
   font-size: 20px;
   margin-left: 3vw;
   @media screen and (max-width: 767px) {

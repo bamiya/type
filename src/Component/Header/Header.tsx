@@ -1,8 +1,12 @@
 import * as Styled from "./styled";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import { Link } from "react-scroll";
 
 const Header = () => {
+
+    const navigate = useNavigate();
+    //const location = useLocation();
 
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -23,28 +27,25 @@ const Header = () => {
     };
 
     return(
-          <Styled.Wrapper scroll={scrollPosition > 100 ? true : false}>
+          <Styled.Wrapper $scroll={scrollPosition > 100 ? true : false}>
           {/* 스크롤이 100px 초과일때 true, 100 이하면 false */}
             <Styled.Menu>
-              <Styled.Title scroll={scrollPosition > 100 ? true : false} onClick={scrollToTop}>Logo</Styled.Title>
+              <Styled.Title $scroll={scrollPosition > 100 ? true : false} onClick={scrollToTop}>Logo</Styled.Title>
                 <Styled.WrapperMenu>
 
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>News</Styled.Text>
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false}>News</Styled.Text>
 
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false} 
+                        onClick={() => {navigate("/board");}}>Board
+                    </Styled.Text>
 
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>Board</Styled.Text>
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false}>Highlight</Styled.Text>
 
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false}>Contact</Styled.Text>
 
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>Highlight</Styled.Text>
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false}>LogIn</Styled.Text>
 
-
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>Contact</Styled.Text>
-
-
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>LogIn</Styled.Text>
-
-
-                    <Styled.Text scroll={scrollPosition > 100 ? true : false}>SignUp</Styled.Text>
+                    <Styled.Text $scroll={scrollPosition > 100 ? true : false}>SignUp</Styled.Text>
 
                 </Styled.WrapperMenu>
             </Styled.Menu>
