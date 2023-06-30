@@ -29,7 +29,9 @@ const Header = () => {
           <Styled.Wrapper $scroll={scrollPosition > 100 ? true : false}>
           {/* 스크롤이 100px 초과일때 true, 100 이하면 false */}
             <Styled.Menu>
-              <Styled.Title $scroll={scrollPosition > 100 ? true : false} onClick={scrollToTop}>Logo</Styled.Title>
+                <Styled.Img src={"assets/v.jpg"} alt="logo" />
+              <Styled.Title $scroll={scrollPosition > 100 ? true : false} 
+              onClick={()=>{navigate("/");}}>Logo</Styled.Title>
                 <Styled.WrapperMenu>
 
                     <Styled.Text $scroll={scrollPosition > 100 ? true : false}>News</Styled.Text>

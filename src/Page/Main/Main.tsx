@@ -4,7 +4,8 @@ const Main = () => {
     return(
             <>
              <Styled.Wrapper>god save us</Styled.Wrapper>
-             <Styled.SecondWrapper>god save us</Styled.SecondWrapper>            
+             <Styled.SecondWrapper>god save us</Styled.SecondWrapper>  
+             <Styled.ThirdWrapper>nothin</Styled.ThirdWrapper>          
             </>
                 
     );

@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Img = styled.img`
+    cursor: pointer;
+    margin-right: 15px;
+    height: 15px;
+    width: 15px;
+`
 
 export const Wrapper = styled.div<{ $scroll : boolean }>`  // TypeScript에서 props 사용시 타입지정 해줘야함.
   /* 레이아웃 */

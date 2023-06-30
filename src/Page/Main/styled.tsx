@@ -26,3 +26,13 @@ export const SecondWrapper = styled.div`
     background-color: rgb(153 200 255);
     flex-wrap: wrap;
 `;
+
+export const ThirdWrapper = styled.div`
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    width: 100%;
+    background-color: rgb(255 238 249);
+    flex-wrap: wrap;
+`;
