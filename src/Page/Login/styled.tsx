@@ -1,4 +1,18 @@
 import styled from "styled-components";
+//import Modal from 'react-modal';
+
+export const UserBlueBtn = styled.button`
+    width: 350px;
+    height: 35px;
+    background-color: #38B7FF;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+`
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -18,17 +32,17 @@ export const LoginText = styled.div`
     margin-bottom: 40px;
 `
 
-export const LoginText2 = styled.div`
+export const LoginText2 = styled.label`
     font-size: 18px;
     font-weight: 500;
     color: black;
     margin-bottom: 40px;
 `
 
-export const KakaoBtn = styled.div`
+export const GoogleBtn = styled.div`
     width: 350px;
     height: 35px;
-    background-color: #F6EF3D;
+    background-color: #FFFFFF;
     margin-top: 10px;
     margin-bottom: 10px;
     color: black;
@@ -65,3 +79,18 @@ export const FindSignText = styled.span`
     margin-bottom: 40px;
     cursor: pointer;
 `
+
+// export const FindPassModal = styled(Modal)`
+//     position: absolute;
+//     width: 700px;
+//     height: 600px;
+//     background: rgb(255 255 255);
+//     border-radius: 4px;
+//     outline: none;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate( -50%, -50%);
+//     box-sizing: border-box;
+//     padding: 20px 20px;
+//     box-shadow: 0px 0px 10px 4px black;
+// `

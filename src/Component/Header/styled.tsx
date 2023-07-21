@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Img = styled.img`
     cursor: pointer;
     margin-right: 15px;
-    height: 15px;
-    width: 15px;
+    height: 40px;
+    width: 40px;
+    margin-left: 5vw;
 `
 
 export const Wrapper = styled.div<{ $scroll : boolean }>`  // TypeScript에서 props 사용시 타입지정 해줘야함.
@@ -42,7 +43,7 @@ export const Title = styled.div<{ $scroll: boolean }>`
   text-decoration: underline;
   font-size: 30px;
   font-weight: bold;
-  margin-left: 10vw;
+  margin-left: 5vw;
   margin-right: 40vw;
   @media screen and (max-width: 767px) {
     font-size: 24px;
