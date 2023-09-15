@@ -3,6 +3,7 @@ import * as Styles from "./styled";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import CryptoJS from "crypto-js";
+import Header from "../../Component/Header/Header";
 
 const SignUp: React.FC = () => {
     const location = useLocation();
@@ -141,6 +142,8 @@ const SignUp: React.FC = () => {
   };
 
   return (
+    <>
+    <Header textColor="black"/>
     <Styles.Wrapper>
       <Styles.ContentBox>
         <Styles.SignText>SIGN UP</Styles.SignText>
@@ -183,6 +186,7 @@ const SignUp: React.FC = () => {
         <Styles.UserGreenBtn onClick={() => signIn()}>가입하기</Styles.UserGreenBtn>
       </Styles.ContentBox>
     </Styles.Wrapper>
+    </>
   );
 };
 export default SignUp;

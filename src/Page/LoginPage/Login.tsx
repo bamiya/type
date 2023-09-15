@@ -3,6 +3,7 @@ import * as Styles from "./styled";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import CryptoJS from "crypto-js";
+import Header from "../../Component/Header/Header"
 
 interface TokenData {
   access_token: string;
@@ -64,7 +65,7 @@ const Login: React.FC = () => {
       navigate("/");
     } catch (e) {
       if (axios.isAxiosError(e)) {
-        alert(e.response?.data?.msg);
+        alert(e.response?.data?.msg); 
       }
       navigate("/login");
     }
@@ -77,6 +78,8 @@ const Login: React.FC = () => {
   };
 
   return (
+  <>
+  <Header titleColor="black" textColor="black" />
     <Styles.Wrapper>
       <Styles.ContentBox>
         <Styles.LoginText>LOGIN</Styles.LoginText>
@@ -103,6 +106,7 @@ const Login: React.FC = () => {
         </Styles.FindSignWrap>
       </Styles.ContentBox>
     </Styles.Wrapper>
+  </>
   );
 };
 
