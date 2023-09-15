@@ -143,7 +143,7 @@ const SignUp: React.FC = () => {
 
   return (
     <>
-    <Header textColor="black"/>
+    <Header titleColor="black" textColor="black"/>
     <Styles.Wrapper>
       <Styles.ContentBox>
         <Styles.SignText>SIGN UP</Styles.SignText>

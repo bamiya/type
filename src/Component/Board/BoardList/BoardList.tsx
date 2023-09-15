@@ -2,14 +2,13 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Styled from "./styled";
 import axios from "axios";
+import Header from "../../Header/Header";
 
 interface Board {
   id: number;
   board_title: string;
-  board_contents: string;
   board_writer: string;
   board_hits: number;
-  board_pass: string;
 }
 
 const BoardList = () => {
@@ -35,24 +34,33 @@ const BoardList = () => {
 
   return (
     <>
-    <Styled.TopPaper>abc</Styled.TopPaper>
-    <Styled.ListWrapper>
-      <Styled.List>
-        {boardList.length > 0 ? (
-          boardList.map((board) => (
-            <Styled.ListItem key={board.id} onClick={() => handleBoardClick(board.id)}>
-              <Styled.ListText>{board.board_title}</Styled.ListText>
-              <Styled.ListText>{board.board_contents}</Styled.ListText>
-              <Styled.ListText>{board.board_writer}</Styled.ListText>
-              <Styled.ListText>{board.board_hits}</Styled.ListText>
-              <Styled.ListText>{board.board_pass}</Styled.ListText>
-            </Styled.ListItem>
-          ))
-        ) : (
-          <Styled.LoadingMessage>Loading...</Styled.LoadingMessage>
-        )}
-      </Styled.List>
-      </Styled.ListWrapper>
+    <Header titleColor="black" textColor="black" />
+    <Styled.BoardListContainer>
+      <Styled.TopPaper>
+        <Styled.WrapperMenu>
+          <Styled.Menu>
+            <Styled.MenuText>전체</Styled.MenuText>
+            <Styled.MenuText>인기글</Styled.MenuText>            
+          </Styled.Menu>
+          <Styled.CreateButton>글쓰기</Styled.CreateButton>
+        </Styled.WrapperMenu>
+      </Styled.TopPaper>
+        <Styled.ListWrapper>
+          <Styled.List>
+            {boardList.length > 0 ? (
+              boardList.map((board) => (
+                <Styled.ListItem key={board.id} onClick={() => handleBoardClick(board.id)}>
+                  <Styled.ListText>{board.board_title}</Styled.ListText>
+                  <Styled.ListText>{board.board_writer}</Styled.ListText>
+                  <Styled.ListText>{board.board_hits}</Styled.ListText>
+                </Styled.ListItem>
+              ))
+            ) : (
+              <Styled.LoadingMessage>Loading...</Styled.LoadingMessage>
+            )}
+          </Styled.List>
+        </Styled.ListWrapper>
+    </Styled.BoardListContainer>
     </>
   );
 };

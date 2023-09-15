@@ -34,31 +34,32 @@ const Header: React.FC<HeaderProps> = ({ textColor, titleColor }) => {
     return(
           <Styled.Wrapper $scroll={scroll}>
           {/* 스크롤이 100px 초과일때 true, 100 이하면 false */}
-            <Styled.Menu>
-                <Styled.Img src={"assets/v.png"} alt="logo" onClick={()=>{navigate("/");}}/>
+          <Styled.Img src={"assets/v.png"} alt="logo" onClick={()=>{navigate("/");}}/>
                     <Styled.Title $scroll={scroll} titleColor={titleColor}
                         onClick={scrollToTop}>Begin</Styled.Title>
+            <Styled.Menu>
+                
                     <Styled.WrapperMenu>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}>News</Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}>News</Styled.Text>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}
-                        onClick={() => {navigate("/board");}}>Board
-                    </Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}
+                            onClick={() => {navigate("/board");}}>Board
+                        </Styled.Text>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}>Highlight</Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}>Highlight</Styled.Text>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}>Contact</Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}>Contact</Styled.Text>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}
-                        onClick={() => {navigate("/login");}}>LogIn
-                    </Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}
+                            onClick={() => {navigate("/login");}}>LogIn
+                        </Styled.Text>
 
-                    <Styled.Text $scroll={scroll} textColor={textColor}
-                        onClick={()=> {navigate("/signUp");}}>SignUp
-                    </Styled.Text>
+                        <Styled.Text $scroll={scroll} textColor={textColor}
+                            onClick={()=> {navigate("/signUp");}}>SignUp
+                        </Styled.Text>
 
-                </Styled.WrapperMenu>
+                    </Styled.WrapperMenu>
             </Styled.Menu>
           </Styled.Wrapper>
   );

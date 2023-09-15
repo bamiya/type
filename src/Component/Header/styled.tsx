@@ -17,6 +17,7 @@ export const Img = styled.img`
 export const Wrapper = styled.div<WrapperProps>`  // TypeScript에서 props 사용시 타입지정 해줘야함.
   /* 레이아웃 */
   display: flex; //가로방향 정렬
+  justify-content: space-between;
   position: fixed;
   top: 0;
   align-items: center; // 수직(위아래)정렬에서 가운데 정렬, 반대로 justify-content: center; 는 수평정렬
@@ -41,7 +42,9 @@ export const Menu = styled.div`
 
 export const WrapperMenu = styled.div`
   display: flex;
-  align-items: center;
+  align-items: center;  
+  justify-content: flex-end;  
+  margin-right: 15px;
 `;
 
 export const Title = styled.div<WrapperProps>`
@@ -51,7 +54,8 @@ export const Title = styled.div<WrapperProps>`
   font-size: 30px;
   font-weight: bold;
   margin-left: 5vw;
-  margin-right: 20vw;
+  flex-grow: 1;
+  
   @media screen and (max-width: 767px) {
     font-size: 24px;
     margin-right: 8vw;
