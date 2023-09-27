@@ -8,6 +8,7 @@ export const ContentBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
 `
 
 export const SignText = styled.div`

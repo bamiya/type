@@ -62,7 +62,7 @@ export const Title = styled.div<WrapperProps>`
   }
   @media screen and (max-width: 500px) {
     font-size: 12px;
-    margin-right: 4vw;
+    margin-right: 8vw;
   }
 `;
 
@@ -75,7 +75,7 @@ export const Text = styled.div<WrapperProps>`
     font-size: 15px;
   }
   @media screen and (max-width: 500px) {
-    font-size: 10x;
+    font-size: 8px;
   }
 `;
 

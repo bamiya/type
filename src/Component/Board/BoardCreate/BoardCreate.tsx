@@ -16,7 +16,7 @@ const BoardCreate = () => {
 
   const handleCreateBoard = async () => {
     try {
-      await axios.post("http://localhost:8080/board", updatedBoard);
+      await axios.post("http://localhost:8080/board/create", updatedBoard);
       setUpdatedBoard({
         board_title: "",
         board_contents: "",
@@ -31,53 +31,55 @@ const BoardCreate = () => {
   };
 
   return (
-    <Styled.FormBox>
-      <Styled.Input
-        type="text"
-        placeholder="제목"
-        value={updatedBoard.board_title}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setUpdatedBoard({
-            ...updatedBoard,
-            board_title: e.target.value
-          })
-        }
-      />
-      <Styled.Input
-        type="text"
-        placeholder="내용"
-        value={updatedBoard.board_contents}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setUpdatedBoard({
-            ...updatedBoard,
-            board_contents: e.target.value
-          })
-        }
-      />
-      <Styled.Input
-        type="text"
-        placeholder="작성자"
-        value={updatedBoard.board_writer}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setUpdatedBoard({
-            ...updatedBoard,
-            board_writer: e.target.value
-          })
-        }
-      />
-      <Styled.Input
-        type="text"
-        placeholder="비밀번호"
-        value={updatedBoard.board_pass}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setUpdatedBoard({
-            ...updatedBoard,
-            board_pass: e.target.value
-          })
-        }
-      />
-      <Styled.Button onClick={handleCreateBoard}>생성</Styled.Button>
-    </Styled.FormBox>
+    <Styled.Wrapper>
+      <Styled.FormBox>
+        <Styled.Input
+          type="text"
+          placeholder="제목"
+          value={updatedBoard.board_title}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setUpdatedBoard({
+              ...updatedBoard,
+              board_title: e.target.value
+            })
+          }
+        />
+        <Styled.Input
+          type="text"
+          placeholder="내용"
+          value={updatedBoard.board_contents}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setUpdatedBoard({
+              ...updatedBoard,
+              board_contents: e.target.value
+            })
+          }
+        />
+        <Styled.Input
+          type="text"
+          placeholder="작성자"
+          value={updatedBoard.board_writer}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setUpdatedBoard({
+              ...updatedBoard,
+              board_writer: e.target.value
+            })
+          }
+        />
+        <Styled.Input
+          type="text"
+          placeholder="비밀번호"
+          value={updatedBoard.board_pass}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setUpdatedBoard({
+              ...updatedBoard,
+              board_pass: e.target.value
+            })
+          }
+        />
+        <Styled.Button onClick={handleCreateBoard}>생성</Styled.Button>
+      </Styled.FormBox>
+    </Styled.Wrapper>
   );
 };
 
